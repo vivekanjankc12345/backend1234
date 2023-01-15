@@ -8,7 +8,7 @@ const {auth}=require("./Middleware/authecate")
 app.use(cors())
 app.use(express.json());
 app.use("/user",userrouter)
-app.use(auth)
+//app.use(auth)
 app.use("/note",noterouter)
 app.listen(8080,async()=>{
     try{
