@@ -11,7 +11,7 @@ console.log(token)
  }
  else
  {
-    res.send("please login firt baba ")
+    res.send("please login first baba ")
  }
 }
 else{
