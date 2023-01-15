@@ -15,7 +15,7 @@ app.get("/",async(req,res)=>
     res.send("alldata")
 })
 app.use("/user",userrouter)
-app.use(auth)
+//app.use(auth)
 app.use("/note",noterouter)
 app.listen(process.env.port,async()=>{
     try{
