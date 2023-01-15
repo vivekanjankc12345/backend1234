@@ -10,6 +10,10 @@ app.use(cors({
     origin:"*"
 }))
 app.use(express.json());
+app.get("/",async(req,res)=>
+{
+    res.send("alldata")
+})
 app.use("/user",userrouter)
 app.use(auth)
 app.use("/note",noterouter)
