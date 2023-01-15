@@ -27,5 +27,5 @@ app.listen(process.env.port,async()=>{
        console.log("kuch garbar h re baba")
        console.log(err)
     }
-    console.log(`${process.env.port} port pe server kaam kar raha h`)
+    console.log(`8080 port pe server kaam kar raha h`)
 })
