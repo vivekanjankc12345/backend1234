@@ -2,6 +2,7 @@ const express=require("express");
 const userrouter=express.Router();
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
+require('dotenv').config()
 const {signupmodel}=require("../Model/signupmodel")
 
 
@@ -38,7 +39,7 @@ userrouter.post("/login",async(req,res)=>{
         bcrypt.compare(password,post[0].password, function(err, result) {
             if(result)
             {
-                const token = jwt.sign({ foo: 'bar' }, 'masai');
+                const token = jwt.sign({ foo: 'bar' }, 'process.env.key');
                 res.send({"msg":"login sucessfull","token":token})
             }
             else{
